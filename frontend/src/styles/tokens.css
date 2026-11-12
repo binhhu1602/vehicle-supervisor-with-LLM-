@@ -1,0 +1,125 @@
+/*
+ * Design tokens — chủ đề ĐÈN GIAO THÔNG.
+ * Xanh lá = thông suốt / hành động chính · Vàng = chú ý · Cam = ùn ứ · Đỏ = nguy hiểm.
+ * Mặc định giao diện sáng; sidebar luôn tối (như vỏ cột đèn).
+ */
+:root,
+:root[data-theme='light'] {
+  --bg: #f3f5f4;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f6f8f7;
+  --surface-hover: #eff3f1;
+  --border: #e3e8e5;
+  --border-strong: #cfd6d2;
+  --text: #17201b;
+  --text-muted: #56615b;
+  --text-faint: #8b958f;
+
+  /* Màu đèn */
+  --tl-green: #16a34a;
+  --tl-yellow: #eab308;
+  --tl-amber: #f97316;
+  --tl-red: #dc2626;
+
+  --accent: #16a34a;
+  --accent-strong: #15803d;
+  --accent-soft: #e8f6ed;
+  --c-ok: #16a34a;
+  --c-info: #2563eb;
+  --c-caution: #ca8a04;
+  --c-warn: #ea580c;
+  --c-danger: #dc2626;
+  --c-critical: #b91c1c;
+  --ok-soft: #e8f6ed;
+  --info-soft: #eaf0fd;
+  --caution-soft: #fef8dc;
+  --warn-soft: #fff0e5;
+  --danger-soft: #fdecec;
+  --danger-border: #f6c3c3;
+
+  --shadow: 0 1px 2px rgba(16, 24, 20, 0.05), 0 2px 8px rgba(16, 24, 20, 0.05);
+  --shadow-lg: 0 12px 32px rgba(16, 24, 20, 0.16);
+  --grid: #edf0ee;
+
+  /* Biểu đồ: bảng màu phân loại đã kiểm định CVD (thứ tự cố định) */
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --chart-flow: #16a34a;
+  --chart-speed: #2563eb;
+  --chart-index: #ea580c;
+
+  /* Sidebar tối */
+  --side-bg: #111714;
+  --side-bg-2: #1a221e;
+  --side-border: #26302b;
+  --side-text: #e6ece8;
+  --side-muted: #8d9a93;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f1412;
+  --bg-elev: #161d19;
+  --surface: #172019;
+  --surface-2: #1c2620;
+  --surface-hover: #212d26;
+  --border: #29352e;
+  --border-strong: #38463e;
+  --text: #e8eee9;
+  --text-muted: #a9b5ae;
+  --text-faint: #7a877f;
+
+  --tl-green: #22c55e;
+  --tl-yellow: #facc15;
+  --tl-amber: #fb923c;
+  --tl-red: #ef4444;
+
+  --accent: #22c55e;
+  --accent-strong: #16a34a;
+  --accent-soft: rgba(34, 197, 94, 0.13);
+  --c-ok: #22c55e;
+  --c-info: #60a5fa;
+  --c-caution: #facc15;
+  --c-warn: #fb923c;
+  --c-danger: #f87171;
+  --c-critical: #ef4444;
+  --ok-soft: rgba(34, 197, 94, 0.13);
+  --info-soft: rgba(96, 165, 250, 0.13);
+  --caution-soft: rgba(250, 204, 21, 0.12);
+  --warn-soft: rgba(251, 146, 60, 0.13);
+  --danger-soft: rgba(248, 113, 113, 0.12);
+  --danger-border: rgba(248, 113, 113, 0.35);
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --grid: #243029;
+
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --chart-flow: #22c55e;
+  --chart-speed: #60a5fa;
+  --chart-index: #fb923c;
+
+  --side-bg: #0b0f0d;
+  --side-bg-2: #141a17;
+  --side-border: #1f2823;
+  --side-text: #e6ece8;
+  --side-muted: #84918a;
+  color-scheme: dark;
+}
+
+:root {
+  --radius-sm: 8px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --sidebar-w: 240px;
+  --topbar-h: 62px;
+  --font: 'Be Vietnam Pro', 'Segoe UI', system-ui, Arial, sans-serif;
+  --mono: 'JetBrains Mono', Consolas, ui-monospace, monospace;
+  --stripe: linear-gradient(90deg, var(--tl-red) 0 33.3%, var(--tl-yellow) 33.3% 66.6%, var(--tl-green) 66.6% 100%);
+}

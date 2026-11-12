@@ -1,0 +1,10 @@
+{
+  "cameraId": "CAM-05",
+  "countLine": [[120, 430], [1160, 430]],
+  "roi": [[80, 300], [1200, 300], [1270, 710], [10, 710]],
+  "metersPerPixel": 0.045,
+  "direction": [0, 1],
+  "stalledSeconds": 180,
+  "freeFlowKmh": 40,
+  "_ghi_chu": "Tọa độ pixel theo độ phân giải video (vd. 1280x720). countLine: vạch đếm cắt ngang các làn cùng chiều. roi: đa giác vùng làn dùng tính tốc độ/chiếm dụng. metersPerPixel: đo bề rộng 1 làn (~3.5 m) trên ảnh rồi chia. direction: hướng đi hợp lệ khi cắt vạch ([0,1] = đi xuống dưới khung hình); bỏ trường này nếu vạch cắt cả 2 chiều."
+}

@@ -1,0 +1,6 @@
+# Dịch vụ AI Vision: phát hiện + bám vết phương tiện, trích xuất lưu lượng → gửi backend
+ultralytics>=8.3       # YOLO11 + ByteTrack (giấy phép AGPL-3.0)
+opencv-python>=4.10
+numpy>=1.26
+httpx>=0.28
+pytest>=8.3

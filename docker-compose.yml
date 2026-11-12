@@ -1,0 +1,48 @@
+# Hạ tầng phát triển: PostgreSQL + backend FastAPI (+ Adminer xem CSDL khi cần)
+#   docker compose up -d db              # chỉ chạy CSDL (khi chạy backend trực tiếp bằng uvicorn)
+#   docker compose up -d                 # CSDL + backend
+#   docker compose --profile tools up -d # thêm Adminer tại http://localhost:8080
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: trafficeye-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: trafficeye
+      POSTGRES_PASSWORD: trafficeye
+      POSTGRES_DB: trafficeye
+      TZ: Asia/Ho_Chi_Minh
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trafficeye -d trafficeye"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build: ./backend
+    container_name: trafficeye-api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+asyncpg://trafficeye:trafficeye@db:5432/trafficeye
+      JWT_SECRET: ${JWT_SECRET:-change-this-secret-in-production}
+      INGEST_API_KEY: ${INGEST_API_KEY:-dev-ingest-key}
+      CORS_ORIGINS: '["http://localhost:5173"]'
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    ports:
+      - "8000:8000"
+
+  adminer:
+    image: adminer:4
+    profiles: ["tools"]
+    depends_on: [db]
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:

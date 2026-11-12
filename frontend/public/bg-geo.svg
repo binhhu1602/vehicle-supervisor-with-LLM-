@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!-- Họa tiết mặt phẳng chéo, màu trung tính rất nhạt: phủ lên màu nền nên dùng được cho cả giao diện sáng/tối -->
+  <g fill="#fff">
+    <polygon points="0,0 520,0 0,420" fill-opacity="0.55"/>
+    <polygon points="380,900 1050,260 1600,900" fill-opacity="0.35"/>
+    <polygon points="900,0 1600,0 1600,520" fill-opacity="0.45"/>
+    <polygon points="0,560 340,900 0,900" fill-opacity="0.5"/>
+    <polygon points="1050,260 1600,520 1600,900" fill-opacity="0.25"/>
+  </g>
+  <g fill="#000">
+    <polygon points="520,0 900,0 300,900 0,900 0,820" fill-opacity="0.018"/>
+    <polygon points="1240,0 1320,0 1600,330 1600,420" fill-opacity="0.025"/>
+  </g>
+  <g stroke="#fff" stroke-opacity="0.9" stroke-width="3" fill="none">
+    <line x1="1100" y1="0" x2="1600" y2="560"/>
+    <line x1="160" y1="900" x2="760" y2="420"/>
+  </g>
+</svg>
